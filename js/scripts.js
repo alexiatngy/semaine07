@@ -9,20 +9,17 @@ for (let i = 0; i < boutonsModale.length; i++) {
 
 function openModale() {
 
-const chemin = this.previousElementSibling.getAttribute("src");
-const image = document.createElement('img');
-image.setAttribute('src', chemin);
-image.classList.add('zoom');
+const texte = document.createElement("p");
+texte.textContent= "Modale"
 
-modale.appendChild(image);
+modale.appendChild(texte);
 modale.classList.add('visible');
 
 
-image.addEventListener("click", closeModale);
+modale.addEventListener("click", closeModale);
 }
 
 function closeModale(event) {
-    modale.removeChild(event.target);
     modale.classList.remove('visible');
 }
 
